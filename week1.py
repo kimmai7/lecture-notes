@@ -35,5 +35,12 @@ with open('dictionary.pickle', 'rb') as file:
 
 # SAVE TO GIT
 # terminal > local
-# git init > git add week1.py
-# lecture1 code: B7x9
+# git init > git add week1.py > git commit -m "first commit"
+# CHECK GIT REPO
+# git log
+# GET ALL CHANGES
+# git push -u --force origin main
+
+# LEC1 CODE: B7x9
+
+
