@@ -11,7 +11,6 @@ foo(a = 1, b = 2, c = 3, d = 4)
 # returns () {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 print()
 
-
 def h(a, b, c, d):
     print(a, b, c, d)
 def i(*args, **kwargs):
@@ -22,6 +21,7 @@ i(1, 2, c = 3, d = 4)
 i(a = 1, b = 2, c = 3, d = 4)
 # also returns 1 2 3 4
 print()
+
 
 
 # NESTED FUNCS
@@ -56,6 +56,7 @@ print(f2(1))
 print()
 
 
+
 # LAMBDA FUNC
 def add(a, b):
     return a + b
@@ -70,6 +71,7 @@ print(add2(5, 6))
 def bigger_than_age(age):
     return (lambda x: x > age)
 print()
+
 
 
 # LIST COMPREHENSION
@@ -101,6 +103,7 @@ print(hash(1)) # ok
 print(hash([])) #TypeError
 
 
+
 # DICT COMPREHENSION
 z = ['one', 'two', 'three', 'four', 'five']
 new_dict = dict()
@@ -115,4 +118,20 @@ print(dict_com)
 print()
 
 
+
 # TUPLE COMPREHENSION
+x = (i for i in 'abc')
+print(x)
+# returns a generator object
+
+# generator: something you can iterate over only once
+for i in x:
+    print(i)
+# returns a b c (on separate lines)
+
+x = tuple(i for i in 'abc')
+# x is now a tuple instead of a generator
+
+# SET COMPREHENSION
+s = set(i for i in 'abc')
+s2 = {i for i in 'abc'}
