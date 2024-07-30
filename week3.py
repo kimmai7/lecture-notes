@@ -30,3 +30,27 @@ class LinkedList:
         self.n = n
         self.next = next
 # [1, next] -> [2, next] -> [3, next] -> [4, None]
+
+
+
+class C:
+    def __init__(self, x, y):
+        self.lst = [x, y]
+
+    def len(self):
+        return len(self.lst)
+
+    def __len__(self):
+        return len(self.lst)
+
+a = C(1, 2)
+print(len(a))
+# this will only work if the len func is a dunder method
+# otherwise it doesn't know there is a len func in the class C
+
+print(a.__dict__)
+a.x = 1
+a.__dict__['y'] = 2
+print(a.y)
+
+# BBUS
